@@ -78,20 +78,17 @@
 
     <script>
         function calculateBMI() {
-            // Get the input values
+            
             let weight = document.getElementById('weight').value;
             let height = document.getElementById('height').value;
 
-            // Check if the input values are valid
             if (weight <= 0 || height <= 0) {
                 document.getElementById('result').innerText = 'Please enter valid values for weight and height.';
                 return;
             }
 
-            // Calculate BMI
             let bmi = weight / (height * height);
 
-            // Determine the BMI category
             let category;
             if (bmi < 18.5) {
                 category = 'Underweight';
@@ -103,7 +100,6 @@
                 category = 'Obesity';
             }
 
-            // Display the result
             document.getElementById('result').innerText = 'Your BMI is ' + bmi.toFixed(2) + ' (' + category + ').';
         }
     </script>
