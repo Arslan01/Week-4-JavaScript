@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+<!--     
+    <form>
+        <input type="number" value=0 id="input1">
+        <input type="number" value=0 id="input2">
+    
+        
+    </form>
+    <h1 id="show">Show Data</h1>
+
+    <button onclick="changingData()">Change Data</button>
+<script>
+    let x1 = document.getElementById("inputData");
+    console.log(x1.value);
+    document.getElementById("heading").innerHTML = x1.value;
+    function changingData(){
+       let x =  document.getElementById("input1").value
+       let y =  document.getElementById("input2").value
+       document.getElementById("show").innerHTML = Number(x) + Number(y);
+       document.querySelector("#show").style.backgroundColor="blue";
+    }
+    
+</script> -->
+
+
+
+
+
+<body>
+    
+    <p id="input">
+        Enter First Number: <input id="one">
+    <br/><br/> Enter Second Number: <input id="two"></p>
+    <p><button onclick="fun()">Add, Subtract, Multiply, Divide</button></p>
+    <p id="res" style="display:none;">
+    Addition Result = <input id="add"><br/><br/>
+    Subtraction Result = <input id="subtract"><br/><br/>
+    Multiplication Result = <input id="multiply"><br/><br/>
+    Division Result = <input id="divide"></p>
+
+
+
+    
+<script>
+    var numOne, numTwo, res, temp;
+    function fun()
+    {
+      numOne = parseInt(document.getElementById("one").value);
+      numTwo = parseInt(document.getElementById("two").value);
+      if(numOne && numTwo)
+      {
+        temp = document.getElementById("res");
+        temp.style.display = "block";
+        res = numOne + numTwo;
+        document.getElementById("add").value = res;
+        res = numOne - numTwo;
+        document.getElementById("subtract").value = res;
+        res = numOne * numTwo;
+        document.getElementById("multiply").value = res;
+        res = numOne / numTwo;
+        document.getElementById("divide").value = res;
+      }
+    }
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+<html>
+
+<head>
+
+</head>
+<body>
+    
+    <script>
+
+    const div = document.createElement('div');
+    div.textContent = 'This is a div .';
+    document.body.append(div);
+
+    const span = document.createElement('span');
+    span.style.color = 'red';
+    span.style.fontWeight = 'bold';
+    span.textContent = 'This is a red, bold span.';
+    document.body.appendChild(span);
+
+
+    // Create a paragraph element
+    const paragraph = document.createElement('p');
+    paragraph.textContent = 'This is a paragraph with an id and class.';
+    paragraph.id = 'unique-paragraph';
+    paragraph.className = 'styled-paragraph';
+    document.body.appendChild(paragraph);
+
+
+    const button = document.createElement('button');
+    button.textContent = 'Alert me';
+    button.style.fontSize = '20px';
+    button.id = 'alert-button';
+    button.className = 'styled-button';
+
+    // Attach an event listener to the button for the click event
+    button.addEventListener('click', () => {
+        alert('Alert Generated');
+    });
+
+    // Append the button to the body
+    document.body.appendChild(button);
+
+    let closurefunc = ( )=>{
+
+        let count = 0;
+        let increment =()=>{
+            count += 1;
+            console.log(count);
+        }
+
+        let decrement =()=>{
+            count -= 1;
+            console.log(count);
+        }
+
+        // return{increment, decrement};
+        return()=>{
+            increment;
+            decrement;
+            
+        }
+    };
+
+    let counterfunc = closurefunc();
+    counterfunc.increment();
+    counterfunc.decrement();
+
+    </script>
+
+</body>
+</html>
